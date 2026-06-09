@@ -1,0 +1,168 @@
+@keyframes pop {
+    0% { letter-spacing: 1.0px; color: rgb(213, 213, 0);}
+    50% { letter-spacing: 5.0px; color: rgb(213, 213, 0); }
+    100% { letter-spacing: 1.0px; color: rgb(213, 213, 0);}
+}
+
+.pop {
+    animation: pop 0.2s linear;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    font-family: "Roboto Mono", monospace;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#top-nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1)
+}
+
+#top-nav h1 {
+    margin: 0;
+    cursor: default;
+    color: rgb(255, 255, 148);
+    transition: all 0.15s ease;
+}
+
+#top-nav h1:hover {
+    letter-spacing: 5px;
+}
+
+#top-nav p {
+    margin: 0;
+    cursor: default;
+    color: white;
+    transition: all 0.15s ease;
+}
+
+#top-nav p:hover {
+    letter-spacing: 5px;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#amount-won-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#amount-won::before {
+    content: "Amount won: $";
+}
+
+#amount-won {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 25px;
+    cursor: default;
+}
+
+#balance {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#money-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 0;
+}
+
+#money::before {
+    content: "$";
+    font-size: 90%;
+    padding-right: 5px;
+    position: relative;
+    top: -4px;
+}
+
+#money {
+    position: relative;
+    font-size: 75px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 4px;
+    cursor: default;
+}
+
+#try-luck {
+    font-family: "Roboto Mono", monospace;
+    font-size: 16px;
+    background-color: black;
+    color: rgb(255, 255, 148);
+    padding: 24px 48px;
+    border-radius: 16px;
+    border: none;
+    display: block;
+    margin-top: 0;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.14s ease;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+#try-luck:hover {
+    transform: translateY(-3px);
+}
+
+#try-luck:active {
+    transform: scale(0.97);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(20, 20, 20);
+        color: white;
+    }
+
+    #money::before {
+        content: "$";
+        color: white;
+    }
+
+    #money {
+        color: white;
+    }
+
+    #top-nav {
+        background-color: rgb(255, 255, 148)
+    }
+
+    #top-nav h1,
+    #top-nav p {
+        color: black;
+    }
+
+    #try-luck {
+        background-color: rgb(255, 255, 148);
+        color: black;
+    }
+}
