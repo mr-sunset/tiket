@@ -129,12 +129,14 @@ main {
     -webkit-touch-callout: none;
 }
 
-#try-luck:hover {
-    transform: translateY(-3px);
-}
-
 #try-luck:active {
     transform: scale(0.97);
+}
+
+@media (hover: hover) {
+    #try-luck:hover {
+        transform: translateY(-3px);
+    }
 }
 
 @media (prefers-color-scheme: dark) {
