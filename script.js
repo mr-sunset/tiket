@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     resetButton.addEventListener('click', () => {
-        money.innerHTML = 0;
-        amountWon.innerHTML = 0;
+        money = 0;
+        amountWon = 0;
     })
 })
