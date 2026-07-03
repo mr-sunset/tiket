@@ -30,7 +30,7 @@ body {
 }
 
 #top-nav h1 {
-    margin: 0;
+    margin: 0 5px;
     cursor: default;
     color: rgb(255, 255, 148);
     transition: all 0.15s ease;
@@ -40,8 +40,23 @@ body {
     letter-spacing: 5px;
 }
 
+#reset-icon path {
+    fill: rgb(255, 255, 148);
+    stroke: rgb(255, 255, 148);
+}
+
+#reset-icon:hover {
+    transform: rotate(360deg);
+    transition: all 0.5s ease;
+}
+
+#reset-icon:active {
+    transform: scale(0.9);
+    transition: all 0.15s ease;
+}
+
 #top-nav p {
-    margin: 0;
+    margin: 0 5px;
     cursor: default;
     color: white;
     transition: all 0.15s ease;
@@ -138,27 +153,14 @@ main {
 }
 
 #reset-icon {
-    fill: black;
-    stroke: black;
+    fill: white;
+    stroke: white;
     stroke-width: 5px;
     height: 30px;
     width: 30px;
     cursor: pointer;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    transition: all 0.15s ease;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-}
-
-#reset-icon:hover {
-    transform: rotate(360deg);
-    transition: all 0.5s ease;
-}
-
-#reset-icon:active {
-    transform: scale(0.95);
     transition: all 0.15s ease;
 }
 
@@ -191,8 +193,8 @@ main {
         color: black;
     }
 
-    #reset-icon {
-        fill: rgb(255, 255, 148);
-        stroke: rgb(255, 255, 148);
+    #reset-icon path {
+        fill: black;
+        stroke: black;
     }
 }
