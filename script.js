@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const money = document.getElementById('money');
     const amountWon = document.getElementById('amount-won');
     const getTicket = document.getElementById('try-luck');
+    const resetButton = document.getElementById('reset-icon');
 
     let balance = 0;
 
@@ -35,6 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         money.classList.add('pop');
         setTimeout(() => {
             money.classList.remove('pop');
-        }, 200);        
+        }, 200);
     });
+
+    resetButton.addEventListener('click', () => {
+        money.innerHTML = 0;
+        amountWon.innerHTML = 0;
+    })
 })
