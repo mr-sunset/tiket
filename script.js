@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const money = document.getElementById('money');
-    const amountWon = document.getElementById('amount-won');
+    let money = document.getElementById('money');
+    let amountWon = document.getElementById('amount-won');
     const getTicket = document.getElementById('try-luck');
     const resetButton = document.getElementById('reset-icon');
 
@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     resetButton.addEventListener('click', () => {
-        money = 0;
-        amountWon = 0;
+        balance = 0;
+        money.innerHTML = 0;
+        amountWon.innerHTML = 0;
     })
 })
